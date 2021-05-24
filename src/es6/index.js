@@ -28,3 +28,52 @@ let hello = 'Hello';
 let world = 'World';
 let holaMundo = `${hello} ${world}`;
 console.log(holaMundo);
+
+// Antes las multilines.
+
+var lorem = 'primera frase de este parrafo\nsegunda frase del parrafo';
+var lorem2 = `primera frase de este parrafo
+segunda frase del parrafo
+tercera frase separada`;
+
+console.log(lorem2);
+
+
+// Destructuracion de objetos.
+
+let perosn = {
+    nombre: 'Juan',
+    edad: 34,
+    pais: 'Bolivia'
+}
+
+console.log(perosn.nombre, perosn.edad)
+
+let { nombre, edad, pais } = perosn;
+
+console.log(nombre, edad, pais)
+
+// Uniendo elementos.
+
+let team1 = ['carlos', 'juan', 'pedro']
+let team2 = ['Amalia', 'Carla', 'Sofia']
+
+let education = ['David', ...team1, ...team2]
+console.log(education)
+
+// var and let 
+
+{
+    var demoVariableVar = 'hola mundo';
+}
+console.log(demoVariableVar)
+{
+    let demoVariableLet = 'hola mundillo';
+    console.log(demoVariableLet)
+}
+
+
+// Constant
+
+const fana = 34;
+fana = 45;
