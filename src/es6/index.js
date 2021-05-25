@@ -29,6 +29,7 @@ let world = 'World';
 let holaMundo = `${hello} ${world}`;
 console.log(holaMundo);
 
+// class 3
 // Antes las multilines.
 
 var lorem = 'primera frase de este parrafo\nsegunda frase del parrafo';
@@ -77,3 +78,48 @@ console.log(demoVariableVar)
 
 const fana = 34;
 fana = 45;
+
+// class 4
+// propiedad de objetos
+
+let name = 'Oscar'
+let age = 34;
+
+// let obj = { name: name, age: age}
+
+obj = { name, age }
+console.log(obj)
+
+// arroy function
+const names = [
+    {name: 'Oscar', age: 34 },
+    {name: 'Luis', age: 33 },
+    {name: 'wario', age: 43 },
+    {name: 'Pamela', age: 32 }
+]
+
+// let listOfNames = names.map(function(element){
+//     console.log(element.name)
+// })
+
+let listOfNames = names.map(element => console.log(`my name is ${element.name}`))
+// console.log(listOfNames) devolvera indefinido
+
+const valor = (x) => console.log(x*x)
+valor(3) 
+
+// Promesas 
+
+const helloPromse = () => {
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve('Hey!')
+        } else {
+            reject('Upps!')
+        }
+    })
+}
+
+helloPromse()
+    .then(valor => console.log(valor))
+    .catch(vaor => console.log(vaor))
