@@ -123,3 +123,58 @@ const helloPromse = () => {
 helloPromse()
     .then(valor => console.log(valor))
     .catch(vaor => console.log(vaor))
+
+// class 5,6,7
+// Clases 
+
+class Calculator {
+    constructor() {
+        this.a = 0;
+        this.b = 0;
+    }
+    sumar(a, b) {
+        this.a = a;
+        this.b = b;
+        return this.a + this.b;
+    }
+    restar(a, b) {
+        this.a = a;
+        this.b = b;
+        return this.a - this.b;
+    }
+    Multiplicar(a, b) {
+        this.a = a;
+        this.b = b;
+        return this.a * this.b;
+    }
+    dividir(a, b) {
+        this.a = a;
+        this.b = b;
+        return this.a / this.b;
+    }
+}
+
+
+let cal = new Calculator()
+
+console.log(cal.sumar(2,4))
+// modulos
+import { saludar } from './module'
+saludar()
+
+// generadores 
+
+function* holaMundo(){
+    if(true){
+        yield 'hola, ';
+    }
+    if(true){
+        yield 'Mundo'
+    }
+};
+
+const generador = holaMundo()
+
+console.log(generador.next().value)
+console.log(generador.next().value)
+console.log(generador.next().value)

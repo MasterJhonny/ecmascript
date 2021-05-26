@@ -194,3 +194,37 @@ const saludar = () => {
 saludar()
     .then(saludar => console.log(saludar))
     .catch(err => console.log(err))
+
+// practice 4
+// propiedad de objetos
+
+let nombre = 'Jhonny'
+let edad = 27
+
+per = { nombre, edad }
+console.log(per)
+
+// arroy function
+var personas = new Array(12)
+function Persona (n, e){
+    this.nombre = n;
+    this.edad = e;
+}
+personas.fill(new Persona('Carlos',34)).map(n => n.edad++ )
+console.log(personas)
+
+personas.forEach(element => {
+    let { nombre, edad } = element
+    console.log(`Nombre: ${nombre}\nedad: ${edad}`)
+})
+
+
+// promesas
+
+let promi = new Promise((resolve, reject) => {
+    true ? resolve('hola mundo') : reject('upss..')
+})
+
+promi
+    .then(valor => console.log(valor))
+    .catch(err => console.log(err))
