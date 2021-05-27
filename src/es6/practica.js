@@ -228,3 +228,50 @@ let promi = new Promise((resolve, reject) => {
 promi
     .then(valor => console.log(valor))
     .catch(err => console.log(err))
+
+
+// practice  5
+// class 
+
+class Persona {
+    constructor(n ,a, e){
+        this.nombre = n;
+        this.apellido = a;
+        this.edad = e; 
+    }
+    saludar(){
+        let { nombre, apellido } = this
+        console.log(`My name is ${nombre} ${apellido}`)
+    }
+    validarEdad(){
+        let { nombre, edad } = this
+        console.log(`${nombre} es ${edad >= 18?'mayor':'menor'} de edad.`)
+    }
+}
+
+let juan = new Persona('Juan', 'Quispe', 34)
+juan.saludar()
+juan.validarEdad()
+
+// modulos
+
+// generadores 
+
+function* generador(){    
+    for(let i=0; i<5; i++) {
+        yield(console.log(i))
+    }
+}
+
+const g = generador()
+
+g.next()
+g.next()
+g.next()
+g.next()
+g.next()
+g.next()
+g.next()
+g.next()
+g.next()
+g.next()// a partir del 4 ya  nos regresa un valor..
