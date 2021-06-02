@@ -13,3 +13,4 @@ let base = 3
 let expo = 3
 let ress = base ** expo
 console.log(`result: ${ress}`)
+ 
