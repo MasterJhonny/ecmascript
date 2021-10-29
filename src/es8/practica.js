@@ -44,3 +44,30 @@ console.log(texto.padEnd(10, ' Mundo'))
 let juan = {
     name: 'Juan',
 }
+
+// practice ...
+// asnyc awaiyt
+
+const saludar = () => {
+    return new Promise((resolve, reject) => {
+        (true)
+            ? setTimeout(() => resolve('hello wolrd'), 3000)
+            : setTimeout(() => reject('Ups sucedio un error'), 2000)
+    })
+}
+
+
+// saludar()
+//     .then(data => console.log(data))
+//     .catch(err => console.log(err))
+
+const validar = async () => {
+    try {
+        let valor = await saludar();
+        console.log(valor);
+    } catch (error) {
+       console.log(error); 
+    }
+}
+
+validar()
